@@ -10,4 +10,4 @@ pandas
 gunicorn
 mysql-connector-python
 mysql
-mysqlclient==2.0.3
+mysqlclient
