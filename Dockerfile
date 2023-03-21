@@ -1,5 +1,4 @@
-FROM python:3.9-slim-buster
-
+FROM python:3.10
 # Set environment variable for Kafka bootstrap servers
 ENV KAFKA_BOOTSTRAP_SERVERS=localhost:9092
 
