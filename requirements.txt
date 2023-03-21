@@ -1,0 +1,13 @@
+setuptools
+ez_setup
+boto3
+botocore
+confluent-kafka
+django
+djangorestframework
+kafka-python
+pandas
+gunicorn
+mysql-connector-python
+mysql
+mysqlclient==2.0.3

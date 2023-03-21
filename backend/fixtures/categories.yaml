@@ -1,0 +1,291 @@
+- model: backend.category
+  pk: 1
+  fields:
+    name: Transportation
+    parent_id: null
+- model: backend.category
+  pk: 2
+  fields:
+    name: Auto/Taxi payment
+    parent_id: 1
+- model: backend.category
+  pk: 3
+  fields:
+    name: Add Oil
+    parent_id: 1
+- model: backend.category
+  pk: 4
+  fields:
+    name: Tires
+    parent_id: 1
+- model: backend.category
+  pk: 5
+  fields:
+    name: Maintenance and oil changes
+    parent_id: 1
+- model: backend.category
+  pk: 6
+  fields:
+    name: Parking fees
+    parent_id: 1
+- model: backend.category
+  pk: 7
+  fields:
+    name: Repairs
+    parent_id: 1
+- model: backend.category
+  pk: 8
+  fields:
+    name: Food
+    parent_id: null
+- model: backend.category
+  pk: 9
+  fields:
+    name: Groceries
+    parent_id: 8
+- model: backend.category
+  pk: 10
+  fields:
+    name: Restaurants
+    parent_id: 8
+- model: backend.category
+  pk: 11
+  fields:
+    name: Utilities
+    parent_id: null
+- model: backend.category
+  pk: 12
+  fields:
+    name: Electricity
+    parent_id: 11
+- model: backend.category
+  pk: 13
+  fields:
+    name: Water
+    parent_id: 11
+- model: backend.category
+  pk: 14
+  fields:
+    name: Water
+    parent_id: 11
+- model: backend.category
+  pk: 15
+  fields:
+    name: Garbage
+    parent_id: 11
+- model: backend.category
+  pk: 16
+  fields:
+    name: Internet
+    parent_id: 11
+- model: backend.category
+  pk: 17
+  fields:
+    name: Phones Recharnges
+    parent_id: 11
+- model: backend.category
+  pk: 18
+  fields:
+    name: Cable Recharnges
+    parent_id: 11
+- model: backend.category
+  pk: 19
+  fields:
+    name: Clothing
+    parent_id: null
+- model: backend.category
+  pk: 20
+  fields:
+    name: Adults' clothing
+    parent_id: 19
+- model: backend.category
+  pk: 21
+  fields:
+    name: Adults' shoes
+    parent_id: 19
+- model: backend.category
+  pk: 22
+  fields:
+    name: Adults' clothing
+    parent_id: 19
+- model: backend.category
+  pk: 23
+  fields:
+    name: Children's clothing
+    parent_id: 19
+- model: backend.category
+  pk: 24
+  fields:
+    name: Children's shoes
+    parent_id: 19
+- model: backend.category
+  pk: 25
+  fields:
+    name: Medical/Healthcare
+    parent_id: null
+- model: backend.category
+  pk: 27
+  fields:
+    name: Primary care
+    parent_id: 25
+- model: backend.category
+  pk: 28
+  fields:
+    name: Dental care
+    parent_id: 25
+- model: backend.category
+  pk: 29
+  fields:
+    name: Medications
+    parent_id: 25
+- model: backend.category
+  pk: 30
+  fields:
+    name: Medical devices
+    parent_id: 25
+- model: backend.category
+  pk: 31
+  fields:
+    name: Insurance
+    parent_id: null
+- model: backend.category
+  pk: 32
+  fields:
+    name: Health insurance
+    parent_id: 31
+- model: backend.category
+  pk: 33
+  fields:
+    name: Auto insurance
+    parent_id: 31
+- model: backend.category
+  pk: 34
+  fields:
+    name: Life insurance
+    parent_id: 31
+- model: backend.category
+  pk: 35
+  fields:
+    name: Household Items/Supplies
+    parent_id: null
+- model: backend.category
+  pk: 36
+  fields:
+    name: Toiletries
+    parent_id: 35
+- model: backend.category
+  pk: 37
+  fields:
+    name: Dishwasher detergent
+    parent_id: 35
+- model: backend.category
+  pk: 38
+  fields:
+    name: Cleaning supplies
+    parent_id: 35
+- model: backend.category
+  pk: 39
+  fields:
+    name: Education
+    parent_id: null
+- model: backend.category
+  pk: 40
+  fields:
+    name: Children's college
+    parent_id: 39
+- model: backend.category
+  pk: 41
+  fields:
+    name: School supplies
+    parent_id: 39
+- model: backend.category
+  pk: 42
+  fields:
+    name: Books
+    parent_id: 39
+- model: backend.category
+  pk: 43
+  fields:
+    name: Savings
+    parent_id: 39
+- model: backend.category
+  pk: 44
+  fields:
+    name: Emergency fund
+    parent_id: null
+
+- model: backend.category
+  pk: 45
+  fields:
+    name: Big purchases
+    parent_id: 44
+- model: backend.category
+  pk: 46
+  fields:
+    name: Other savings
+    parent_id: 44
+- model: backend.category
+  pk: 47
+  fields:
+    name: Gifts/Donations
+    parent_id: null
+- model: backend.category
+  pk: 48
+  fields:
+    name: Gifts/Donations
+    parent_id: null
+- model: backend.category
+  pk: 49
+  fields:
+    name: Birthday
+    parent_id: 48
+- model: backend.category
+  pk: 50
+  fields:
+    name: Anniversary
+    parent_id: 48
+- model: backend.category
+  pk: 51
+  fields:
+    name: Wedding
+    parent_id: 48
+- model: backend.category
+  pk: 52
+  fields:
+    name: Special occasion
+    parent_id: 48
+- model: backend.category
+  pk: 53
+  fields:
+    name: Charities
+    parent_id: 48
+- model: backend.category
+  pk: 54
+  fields:
+    name: Entertainment
+    parent_id: null
+- model: backend.category
+  pk: 55
+  fields:
+    name:  Alcohol and/or bars
+    parent_id: 54
+- model: backend.category
+  pk: 56
+  fields:
+    name: Subscriptions (Netflix, Amazon, Hulu, etc.)
+    parent_id: 54
+- model: backend.category
+  pk: 57
+  fields:
+    name: Movies
+    parent_id: 54
+- model: backend.category
+  pk: 58
+  fields:
+    name: Concerts
+    parent_id: 54
+- model: backend.category
+  pk: 58
+  fields:
+    name: Vacations
+    parent_id: 54
