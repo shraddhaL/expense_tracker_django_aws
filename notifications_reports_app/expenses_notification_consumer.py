@@ -1,8 +1,10 @@
 import json
+import os
 from kafka import KafkaConsumer
 from django.core.mail import send_mail
 
-KAFKA_BOOTSTRAP_SERVERS = ['localhost:9092']
+KAFKA_BOOTSTRAP_SERVERS = os.environ.get('KAFKA_BOOTSTRAP_SERVERS')
+#KAFKA_BOOTSTRAP_SERVERS = ['localhost:9092']
 EXPENSE_TOPIC = 'expense_data'
 
 # Set up the Kafka consumer configuration
