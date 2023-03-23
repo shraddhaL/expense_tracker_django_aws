@@ -63,12 +63,6 @@ jobs:
               uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
               with:
                   images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-                  
-            - name: Extract Docker metadata for Kafka Consumer
-              id: meta_kafka_consumer
-              uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-              with:
-                  images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_KAFKA_CONSUMER }}
 
 
             # Build and push Docker image with Buildx (don't push on PR)
@@ -84,20 +78,8 @@ jobs:
                   labels: ${{ steps.meta.outputs.labels }}
                   cache-from: type=gha
                   cache-to: type=gha,mode=max
-                  
-            - name: Build and push Docker image for Kafka Consumer
-              id: build-and-push-kafka-consumer
-              uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
-              with:
-                  context: .
-                  file: Dockerfile_kafka
-                  push: ${{ github.event_name != 'pull_request' }}
-                  tags: ${{ steps.meta_kafka_consumer.outputs.tags  }}
-                  labels: ${{ steps.meta_kafka_consumer.outputs.labels }}
-                  cache-from: type=gha
-                  cache-to: type=gha,mode=max
-                  
-          
+
+
             # Sign the resulting Docker image digest except on PRs.
             # This will only write to the public Rekor transparency log when the Docker
             # repository is public to avoid leaking data.  If you would like to publish
@@ -110,11 +92,3 @@ jobs:
               # This step uses the identity token to provision an ephemeral certificate
               # against the sigstore community Fulcio instance.
               run: echo "${{ steps.meta.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push.outputs.digest }}
-            
-            - name: Sign the published Kafka Consumer Docker image
-              if: ${{ github.event_name != 'pull_request' }}
-              env:
-                  COSIGN_EXPERIMENTAL: "true"
-              # This step uses the identity token to provision an ephemeral certificate
-              # against the sigstore community Fulcio instance.
-              run: echo "${{ steps.meta_kafka_consumer.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push-kafka-consumer.outputs.digest }}
