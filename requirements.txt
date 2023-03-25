@@ -10,5 +10,9 @@ pandas
 gunicorn
 mysql-connector-python
 mysql
+asgiref
 mysqlclient
 redis
+sqlparse
+PyYAML
+async-timeout
