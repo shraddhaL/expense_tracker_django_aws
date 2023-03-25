@@ -21,6 +21,6 @@ COPY . /app
 EXPOSE 8000
 
 # Start Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver"]
 # CMD ["python", "notifications_reports_app/python expenses_notification_consumer.py"]
 # CMD ["python", "notifications_reports_app/python expenses_reports_consumer.py"]
