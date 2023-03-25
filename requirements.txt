@@ -11,3 +11,4 @@ gunicorn
 mysql-connector-python
 mysql
 mysqlclient
+redis
